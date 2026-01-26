@@ -3,7 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${default}"
+                "${default}",
+                "C:\\msys64_2\\ucrt64\\include\\c++\\15.2.0"
             ],
             "defines": [
                 "_DEBUG",
@@ -11,8 +12,8 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.26100.0",
-            "intelliSenseMode": "windows-msvc-x64",
-            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe"
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerPath": "c:/msys64_2/ucrt64/bin/gcc.exe"
         },
         {
             "name": "GCC",

@@ -7,12 +7,14 @@
     Steps:
     1. Gerenate Random Number
     2. Insert into vector in descending order
+    3. Reverse print the values in the vector so that they are ascending
     **/
 
     #include <iostream>
     #include <cstdlib>
     #include <ctime>
     #include <vector>
+    #include<iterator>
 
 
    using namespace std;
@@ -21,28 +23,31 @@
 
     int main(){
         vector<int> numbers(VECTOR_SIZE);
-        vector<int>::iterator itr;
+        vector<int>::iterator it;
         int new_num;
         bool inserted=false;
 
         //Use current time as random seed
         srand(time(0));
 
-        for(itr = numbers.begin(); itr != numbers.end(); ++itr){
+        for(it = numbers.begin(); it != numbers.end(); ++it){
             //Generate a random number between 0 and 9
             new_num = rand()%10;
             
-            while(int j=0 < numbers.size() && inserted==false){
-                if(numbers[j+1]<= new_num){
-                    if(j==numbers.size()){
+
+            while( it <= numbers.end() && inserted==false){
+                
+                
+                if(*it <= new_num){
+                    if(it==numbers.end()){
                         numbers.push_back(new_num);
                     }
                     else {
-                        numbers.insert(itr+j,new_num);
+                        it=numbers.insert(it,new_num);
                     }
                     inserted = true;
                 }
-                j++;
+
             }
 
             //The number was higher than all the numbers in the vector
@@ -50,12 +55,14 @@
                 numbers.push_back(new_num);
                 inserted = true;
             }
+            //reset the flag for the next loop
+            inserted=false;
         }
 
         //Print out the vector in reverse order
-        for(int i=0;i<numbers.size();i++)
+        for(it=numbers.begin();it<numbers.end();it++)
         {
-            cout << numbers[i] << endl;
+            cout << *it << endl;
         }
         return 0;
     }
