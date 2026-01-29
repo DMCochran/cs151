@@ -19,7 +19,7 @@
             "name": "GCC",
             "includePath": [
                 "${default}",
-                "C:\\msys64\\mingw64\\include\\c++\\12.2.0"
+                "C:\\msys64\\ucrt64\\include\\c++\\15.2.0"
             ],
             "defines": [
                 "_DEBUG",
@@ -28,7 +28,7 @@
             ],
             "windowsSdkVersion": "10.0.26100.0",
             "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "C:/msys64/mingw64/bin/gcc.exe"
+            "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe"
         }
     ],
     "version": 4
