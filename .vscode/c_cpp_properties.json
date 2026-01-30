@@ -27,7 +27,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.26100.0",
-            "compilerPath": "c:\\\\msys64\\\\ucrt64\\\\bin\\\\gcc.exe",
+            "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
             "cStandard": "gnu17",
             "cppStandard": "gnu++17"
         }

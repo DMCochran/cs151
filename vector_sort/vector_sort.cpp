@@ -7,6 +7,9 @@ Problem Statement: Create a vector of 30 random integers from 1 to 10
 Steps:
 1. Gerenate Random Number
 2. Insert into vector in descending order
+    a. Create an iterator for the vector
+    b. If the number is lower than the current number and higher or equal to the next number insert it
+    c. If the iterator is at the end of the vector (it==vector.end()), push_back the number
 3. Reverse print the values in the vector so that they are ascending
 **/
 
@@ -15,7 +18,6 @@ Steps:
 #include <ctime>
 #include <vector>
 #include <iterator>
-// Extension 'Prettier - Code formatter' is configured as formatter but it cannot format 'C++'-files
 
 using namespace std;
 
@@ -23,46 +25,39 @@ const int VECTOR_SIZE = 30;
 
 int main()
 {
-    vector<int> numbers;
-    vector<int>::iterator it = numbers.begin();
+    vector<int> numbers(1); //Set size to one to initialize it
+    vector<int>::iterator it;
     int new_num;
-    bool inserted = false;
+    bool inserted = false; 
 
     // Use current time as random seed
     srand(time(0));
 
-    // While we arent at the end of the vector and we havent inserted yet
-    // It fails when the number is between two numbers. For example when it is 3 and the higher
-    // number is 7 and the lower is 2
-    while (it <= numbers.end() && inserted == false)
-    {
-        // Is it smaller than the current index
-        if (*it >= new_num)
-        {
-            //Insert in place or put it at the end
-            if (it == numbers.end())
-            {
-                numbers.push_back(new_num);
-            }
-            else
-            {
-                it = numbers.insert(it, new_num);
-            }
-            // Change our flag
-            inserted = true;
-        }
-        it++;
-
-        // The number was higher than all the numbers in the vector
-        if (inserted == false)
-        {
-            numbers.push_back(new_num);
-            inserted = true;
-        }
-        // reset the flag for the next loop
-        inserted = false;
-        // Reset the iterator since it is no longer valid
+    //A for loop to control generating 30 numbers
+    for(int i=0;i<VECTOR_SIZE;i++){
+        //Initialize iterator
         it = numbers.begin();
+        //Set our inserted flag
+        inserted = false;
+        //Generate a random number from 0 to 9
+                    //Generate a random number
+        new_num = rand()%10;
+        while(inserted==false){
+
+            //Push_back first number otherwise numbers.begin and end are unusable
+            //Find insertion point and have iterator pointing there
+
+            //Insert if we are at insert point or push_back if at end
+            if(new_num>=*it){
+                numbers.insert(it,new_num);
+                inserted = true;
+            }
+            if(it==numbers.end()){
+                numbers.push_back(new_num);
+                inserted=true;
+            }
+            ++it;
+        }
     }
 
     // Print out the vector in reverse order
