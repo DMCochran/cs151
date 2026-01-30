@@ -16,7 +16,7 @@
             "compilerPath": "c:/msys64_2/ucrt64/bin/gcc.exe"
         },
         {
-            "name": "GCC",
+            "name": "UCRT64",
             "includePath": [
                 "${default}",
                 "C:\\msys64\\ucrt64\\include\\c++\\15.2.0"
@@ -27,8 +27,9 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "10.0.26100.0",
-            "intelliSenseMode": "windows-gcc-x64",
-            "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe"
+            "compilerPath": "c:\\\\msys64\\\\ucrt64\\\\bin\\\\gcc.exe",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17"
         }
     ],
     "version": 4
