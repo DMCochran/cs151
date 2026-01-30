@@ -1,8 +1,9 @@
-/**nyt_temp.cpp
+/**Vector Sort.cpp
 David Cochran
 Module 1
 Project #1 - Vector Sort
-Problem Statement: Create a vector of 30 random integers from 1 to 10
+Problem Statement: Create a vector of 30 random integers from 0 to 9. Store them in reverse numeric order
+and print them in numeric order.
 
 Steps:
 1. Gerenate Random Number
