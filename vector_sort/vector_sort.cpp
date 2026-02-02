@@ -22,7 +22,7 @@ Steps:
 
 using namespace std;
 
-const int VECTOR_SIZE = 30;
+const int kVectorSize = 30;
 
 int main()
 {
@@ -35,17 +35,16 @@ int main()
     srand(time(0));
 
     //A for loop to control generating 30 numbers
-    for(int i=0;i<VECTOR_SIZE;i++){
+    for(int i=0;i<kVectorSize;i++)
+    {
         //Initialize iterator
         it = numbers.begin();
         //Set our inserted flag
         inserted = false;
         //Generate a random number from 0 to 9
-                    //Generate a random number
         new_num = rand()%10;
-        while(inserted==false){
-
-            //Push_back first number otherwise numbers.begin and end are unusable
+        while(inserted==false)
+        {
             //Find insertion point and have iterator pointing there
 
             //Insert if we are at insert point or push_back if at end
@@ -57,6 +56,7 @@ int main()
                 numbers.push_back(new_num);
                 inserted=true;
             }
+            //Iterate to the next number
             ++it;
         }
     }

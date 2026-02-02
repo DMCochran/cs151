@@ -1,22 +1,33 @@
+#include "Planet.h"
+#include <string>
+
 using namespace std;
 
 class Planet{
-
-    string name;
-    int diameter;
-    long long distance;
+    private:
+        std::string name;
+        int diameter;
+        long long distance;
 
     public:
+        Planet(string name, int diameter, long long distance)
+        {
+            this->name = name;
+            this->diameter = diameter;
+            this->distance = distance;
+        }
 
-    Planet(string name, int diameter, long long distance){
-        
-    }
+        string get_name()
+        {
+            return name;
+        }
+        int get_diameter()
+        {
+            return diameter;
+        }
 
-    Planet get_planet(){}
-
-    string get_name(){}
-    
-    int get_diameter(){}
-
-    long long get_distance(){}
-}
+        long long get_distance()
+        {
+            return distance;
+        }
+};
