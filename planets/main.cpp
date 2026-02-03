@@ -78,6 +78,11 @@ void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet)
   bool inserted = false;
   while(it != solarSystem.end() && inserted == false)
   {
+    if(solarSystem(it).get_name()==""){
+      solarSystem.push_back(newPlanet);
+      inserted = true;
+    }
+    
     if(newPlanet.get_distance() <= solarSystem(it).get_distance())
     {
       solarSystem.insert(it, newPlanet);
