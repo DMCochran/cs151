@@ -31,6 +31,18 @@
             "compilerPath": "C:/msys64/ucrt64/bin/gcc.exe",
             "cStandard": "gnu17",
             "cppStandard": "gnu++17"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/c++/15/"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerPath": "/usr/bin/gcc"
         }
     ],
     "version": 4
