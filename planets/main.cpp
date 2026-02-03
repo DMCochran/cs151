@@ -34,6 +34,8 @@ using namespace std;
 
 void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet);
 
+void generateReport(vector<Planet> solarSystem);
+
 int main(){
     int totalDiameter = 0 ;
     long long totalDistance = 0 ;
@@ -68,32 +70,39 @@ int main(){
     insertPlanet(solarSystem, uranus);
     insertPlanet(solarSystem, venus);
 
-  return 0 ;
+    generateReport(solarSystem);
+    return 0 ;
 }
 
 void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet)
+
 {
-  //Insert planet by distance from the sun in ascending order
-  vector<Planet>::iterator it = solarSystem.begin();
-  Planet temp_planet = *it;
-  bool inserted = false;
-  while(it != solarSystem.end() && inserted == false)
-  {
-    if(temp_planet.get_name()==""){
-      solarSystem.push_back(newPlanet);
-      inserted = true;
-    }
-    
-    if(newPlanet.get_distance() <= temp_planet.get_distance())
+    //Insert planet by distance from the sun in ascending order
+    vector<Planet>::iterator it = solarSystem.begin();
+    Planet temp_planet = *it;
+    bool inserted = false;
+    while(it != solarSystem.end() && inserted == false)
     {
-      solarSystem.insert(it, newPlanet);
-      inserted = true;
+      temp_planet = *it;
+      if(temp_planet.get_name()==""){
+        solarSystem.insert(it, newPlanet);
+        inserted = true;
+      }
+      
+      if(newPlanet.get_distance() <= temp_planet.get_distance())
+      {
+        solarSystem.insert(it, newPlanet);
+        inserted = true;
+      }
+
+      ++it;
     }
 
-    it++;
-    temp_planet = *it;
-  }
-  if(inserted==false){
-    solarSystem.push_back(newPlanet);
-  }
+    if(inserted==false){
+      solarSystem.push_back(newPlanet);
+    }
 };
+
+void generateReport(vector<Planet> solarSystem){
+    
+}
