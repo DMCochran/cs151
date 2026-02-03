@@ -3,35 +3,25 @@
 
 using namespace std;
 
-class Planet{
-    private:
-        string name;
-        int diameter;
-        long long distance;
+Planet::Planet(){}
 
-    public:
-        Planet(){
+Planet::Planet(string name, int diameter, long long distance)
+{
+    this->name = name;
+    this->diameter = diameter;
+    this->distance = distance;
+}
 
-        }
-        
-        Planet(string name, int diameter, long long distance)
-        {
-            this->name = name;
-            this->diameter = diameter;
-            this->distance = distance;
-        }
+string Planet::get_name()
+{
+    return name;
+}
+int Planet::get_diameter()
+{
+    return diameter;
+}
 
-        string get_name()
-        {
-            return name;
-        }
-        int get_diameter()
-        {
-            return diameter;
-        }
-
-        long long get_distance()
-        {
-            return distance;
-        }
-};
+long long Planet::get_distance()
+{
+    return distance;
+}

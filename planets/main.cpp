@@ -78,12 +78,13 @@ void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet)
   bool inserted = false;
   while(it != solarSystem.end() && inserted == false)
   {
-    // if(newPlanet.get_distance() <= *it.get_distance())
-    // {
-    //   solarSystem.insert(it, newPlanet);
-    //   inserted = true;
-    // }
-    cout << "Searching." << endl;
+    if(newPlanet.get_distance() <= solarSystem(it).get_distance())
+    {
+      solarSystem.insert(it, newPlanet);
+      inserted = true;
+    }
+
+    it++;
   }
   if(inserted==false){
     solarSystem.push_back(newPlanet);
