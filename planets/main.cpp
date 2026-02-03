@@ -91,6 +91,7 @@ void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet)
     }
 
     it++;
+    temp_planet = *it;
   }
   if(inserted==false){
     solarSystem.push_back(newPlanet);
