@@ -3,6 +3,8 @@
 
 #include <string>
 
+using namespace std;
+
 class Planet{
     private:
         string name{};
@@ -11,6 +13,8 @@ class Planet{
 
     public:
 
+        Planet();
+        
         Planet(string name, int diameter, long long distance);
 
         string get_name();

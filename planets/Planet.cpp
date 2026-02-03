@@ -5,11 +5,15 @@ using namespace std;
 
 class Planet{
     private:
-        std::string name;
+        string name;
         int diameter;
         long long distance;
 
     public:
+        Planet(){
+
+        }
+        
         Planet(string name, int diameter, long long distance)
         {
             this->name = name;

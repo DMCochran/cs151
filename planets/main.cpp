@@ -32,7 +32,7 @@ Steps:
 
 using namespace std;
 
-vector<Planet>::iterator insertPlanet(vector<Planet> solarSystem, Planet newPlanet);
+void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet);
 
 int main(){
     int totalDiameter = 0 ;
@@ -55,8 +55,8 @@ int main(){
     Planet uranus("Uranus",51118,2831000000);  
     Planet venus("Venus",12104,108200000);
 
-    it = insertPlanet(solarSystem, ceres);
-    it = insertPlanet(solarSystem, earth);
+    insertPlanet(solarSystem, ceres);
+    insertPlanet(solarSystem, earth);
     insertPlanet(solarSystem, eris);
     insertPlanet(solarSystem, haumea);
     insertPlanet(solarSystem, jupiter);
@@ -74,22 +74,21 @@ int main(){
   return 0 ;
 }
 
-vector<Planet>::iterator insertPlanet(vector<Planet> solarSystem, Planet newPlanet)
+void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet)
 {
   //Insert planet by distance from the sun in ascending order
   vector<Planet>::iterator it = solarSystem.begin();
   bool inserted = false;
   while(it != solarSystem.end() && inserted == false)
   {
-    if(newPlanet.get_distance() < *it.distance)
-    {
-      solarSystem.insert(it, newPlanet);
-      inserted = true;
-    }
+    // if(newPlanet.get_distance() <= *it.get_distance())
+    // {
+    //   solarSystem.insert(it, newPlanet);
+    //   inserted = true;
+    // }
+    cout << "Searching." << endl;
   }
   if(inserted==false){
     solarSystem.push_back(newPlanet);
   }
-
-  return solarSystem.begin();;
 };
