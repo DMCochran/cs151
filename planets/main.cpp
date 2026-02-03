@@ -38,22 +38,21 @@ int main(){
     int totalDiameter = 0 ;
     long long totalDistance = 0 ;
     vector<Planet> solarSystem(1) ;
-    vector<Planet>::iterator it = solarSystem.begin() ;
 
     //Create the planet objects
     Planet ceres("Ceres",952,413700000) ;
     Planet earth("Earth",12756,149600000) ;
     Planet eris("Eris",2321,10125000000) ;  
-    Planet haumea("Haumea",1220,6452000000);  
-    Planet jupiter("Jupiter",142796,778300000);  
-    Planet makemake("Makemake",1475,6850000000);  
-    Planet mars("Mars",6787,227900000);  
-    Planet mercury("Mercury",4878,57900000);  
-    Planet neptune("Neptune",48600,4497000000);  
-    Planet pluto("Pluto",2302,5891000000);  
-    Planet saturn("Saturn",120660,1427000000);  
-    Planet uranus("Uranus",51118,2831000000);  
-    Planet venus("Venus",12104,108200000);
+    Planet haumea("Haumea",1220,6452000000) ;  
+    Planet jupiter("Jupiter",142796,778300000) ;  
+    Planet makemake("Makemake",1475,6850000000) ;  
+    Planet mars("Mars",6787,227900000) ;  
+    Planet mercury("Mercury",4878,57900000) ;  
+    Planet neptune("Neptune",48600,4497000000) ;  
+    Planet pluto("Pluto",2302,5891000000) ;  
+    Planet saturn("Saturn",120660,1427000000) ;  
+    Planet uranus("Uranus",51118,2831000000) ;  
+    Planet venus("Venus",12104,108200000) ;
 
     insertPlanet(solarSystem, ceres);
     insertPlanet(solarSystem, earth);
@@ -68,8 +67,6 @@ int main(){
     insertPlanet(solarSystem,saturn);
     insertPlanet(solarSystem, uranus);
     insertPlanet(solarSystem, venus);
-
-    
 
   return 0 ;
 }
