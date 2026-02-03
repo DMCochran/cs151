@@ -75,15 +75,16 @@ void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet)
 {
   //Insert planet by distance from the sun in ascending order
   vector<Planet>::iterator it = solarSystem.begin();
+  Planet temp_planet = *it;
   bool inserted = false;
   while(it != solarSystem.end() && inserted == false)
   {
-    if(solarSystem(it).get_name()==""){
+    if(temp_planet.get_name()==""){
       solarSystem.push_back(newPlanet);
       inserted = true;
     }
     
-    if(newPlanet.get_distance() <= solarSystem(it).get_distance())
+    if(newPlanet.get_distance() <= temp_planet.get_distance())
     {
       solarSystem.insert(it, newPlanet);
       inserted = true;
