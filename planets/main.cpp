@@ -104,5 +104,8 @@ void insertPlanet(vector<Planet>& solarSystem, Planet newPlanet)
 };
 
 void generateReport(vector<Planet> solarSystem){
-    
+    cout << "Solar System Planets by Distance" << endl << endl;
+  
+   Planet     Diameter  Dist. to Sun  
+  ----------  --------  ------------
 }
